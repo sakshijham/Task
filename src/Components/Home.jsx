@@ -4,6 +4,7 @@ import { addToCart } from '../redux/cartSlice';
 import { Link } from 'react-router-dom';
 import Carousel from './Carousel';
 import Footer from './Footer';
+import FooterA from './Footer';
 
 const Home = ({ posts }) => {
   const dispatch = useDispatch();
@@ -27,24 +28,24 @@ const Home = ({ posts }) => {
                 />
 
               
-                <div className="p-4 flex flex-col flex-grow">
+                <div className="p-4 flex flex-col flex-grow font-sans ">
                   <Link to={`/products/${e.id}`}>
                     <div className="font-semibold text-lg mb-2 ">
                       {e.title}
                     </div>
                   </Link>
-                  <p className="text-gray-600 text-sm line-clamp-3">
+                  <p className="text-gray-600 text-sm line-clamp-3 font-sans">
                     {e.description}
                   </p>
 
                 
-                  <div className="mt-auto flex justify-between items-center">
+                  <div className="mt-auto flex justify-between items-center font-sans">
                     <span className="bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
                       ${e.price}
                     </span>
                     <button
                       onClick={() =>
-                        dispatch(addToCart({ title: e.title, image: e.image, price: e.price }))
+                        dispatch(addToCart({ id:e.id,title: e.title, image: e.image, price: e.price,quantity:1}))
                       }
                       className="bg-yellow-800 text-white text-sm font-semibold px-3 py-1 mx-3 rounded-full hover:bg-yellow-800"
                     >
@@ -57,6 +58,7 @@ const Home = ({ posts }) => {
           </div>
         </div>
         <Footer />
+        
       </div>
     </>
   );

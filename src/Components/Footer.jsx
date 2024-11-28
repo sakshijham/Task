@@ -1,40 +1,36 @@
-import React from "react";
+import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-6 text-center mt-auto">
-      <p className="text-sm">&copy; 2024 Your Company. All rights reserved.</p>
-      <div className="mt-2">
-        <span>Follow us on:</span>
-        <div className="flex justify-center space-x-4 mt-2">
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            Facebook
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            Twitter
-          </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            Instagram
-          </a>
+    <div className='flex items-center justify-around mt-7 py-20 bg-black font-sans'>
+        <div>
+            <h1 className='font-bold-sans text-gray-500 mb-7'>ABOUT</h1>
+            <h3 className='text-white'>Contact Us</h3>
+            <h3 className='text-white'>Careers</h3>
+            <h3 className='text-white'>Corporate Information</h3>
         </div>
-      </div>
-    </footer>
-  );
-};
+        <div>
+            <h1 className='font-bold-sans text-gray-500 mb-7'>HELP</h1>
+            <h3 className='text-white'>Payments</h3>
+            <h3 className='text-white'>Shipping</h3>
+            <h3 className='text-white'>Cancellation & Returns</h3>
+            <h3 className='text-white'>FAQ</h3>
+        </div>
+        <div>
+            <h1 className='font-bold-sans text-gray-500 mb-7'>CONSUMER POLICY</h1>
+            <h3 className='text-white'>Cancellation and Returns</h3>
+            <h3 className='text-white'>Terms of Use</h3>
+            <h3 className='text-white'>Security</h3>
+            <h3 className='text-white'>Privacy</h3>
+        </div>
+        <div>
+            <h1 className='font-bold-sans text-gray-500 mb-7'>SOCIAL MEDIA</h1>
+            <a href='#' className='text-white'> Facebook</a><br />
+            <a href='#' className='text-white'>Instagram</a><br />
+            <a href="#" className='text-white'>Twitter</a><br />
+        </div>
+    </div>
+  )
+}
 
-export default Footer;
+export default Footer

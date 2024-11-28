@@ -18,19 +18,21 @@ const Navbar = () => {
     <div className="bg-gray-800 text-white p-4">
       <nav className="flex items-center justify-between container mx-auto">
       
-        <div className="text-2xl font-bold">
+      <div className="flex items-center ">
+        <div className="text-2xl font-bold mr-20 ">
           <Link>Logo</Link>
         </div>
 
       
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 ">
           {userDetail && <Link to="/" className="hover:text-gray-400">Home</Link>}
           {userDetail && <Link to="/shop" className="hover:text-gray-400">Shop</Link>}
           {userDetail && <Link to="/page" className="hover:text-gray-400">About Us</Link>}
         </div>
+        </div>
 
       
-        <div className="flex space-x-4 items-center">
+        <div className="flex space-x-4 items-center ">
           {userDetail ? (
             <Link to="/login" onClick={handleLogout}>
               Logout

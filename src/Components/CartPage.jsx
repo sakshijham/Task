@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removefromCart } from '../redux/cartSlice';
 import CartTotal from './CartTotal';
+import { AiOutlineDelete } from "react-icons/ai";
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -38,16 +39,16 @@ const CartPage = () => {
                           <h4 className="text-lg font-semibold">{item.title}</h4>
                         </div>
                       </td>
-                      <td className="py-4 px-4 text-center">1</td> {/* Replace '1' with actual quantity */}
+                      <td className="py-4 px-4 text-center">{item.quantity}</td> 
                       <td className="py-4 px-4 text-right text-gray-600">
                         ${item.price.toFixed(2)}
                       </td>
                       <td className="py-4 px-4 text-center">
                         <button
                           onClick={() => dispatch(removefromCart(index))}
-                          className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"
+                          className="bg-gray-800 text-white px-2 py-2 rounded-lg hover:bg-gray-600 transition"
                         >
-                          Remove
+                          <AiOutlineDelete/>
                         </button>
                       </td>
                     </tr>

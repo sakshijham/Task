@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './Footer';
 
+
 const Pages = () => {
   return (
     <div className="bg-gray-50 text-gray-800">

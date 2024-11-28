@@ -16,13 +16,13 @@ const CartTotal = () => {
       <h1 className="text-xl font-bold mb-4">Cart Summary</h1>
       <div className="space-y-3">
         <h3 className="text-gray-700">
-          <span className="font-semibold">Subtotal:</span> ${total.toFixed(2)}
+          <span className="font-semibold">Subtotal:</span> ${total}
         </h3>
         <h3 className="text-gray-700">
           <span className="font-semibold">Shipping:</span> Free Shipping
         </h3>
         <h3 className="text-gray-800 text-lg">
-          <span className="font-bold">Total:</span> ${total.toFixed(2)}
+          <span className="font-bold">Total:</span> ${total}
         </h3>
       </div>
       <button className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">

@@ -23,7 +23,7 @@ const Shop = ({ posts }) => {
 
   return (
     <>
-      <div className="flex h-screen">
+      <div className="flex h-screen font-sans">
         <div className="w-1/4 bg-gray-100 p-4">
           <SideBar posts={posts} setData={setFilteredPosts} />
           <div className="mt-4">
@@ -79,7 +79,7 @@ const Shop = ({ posts }) => {
                         </span>
                         <button
                           onClick={() =>
-                            dispatch(addToCart({ title: e.title, image: e.image, price: e.price }))
+                            dispatch(addToCart({id:e.id, title: e.title, image: e.image, price: e.price ,quantity:1}))
                           }
                           className="bg-yellow-800 text-white text-sm font-semibold px-3 py-1 mx-3 rounded-full hover:bg-yellow-700"
                         >
